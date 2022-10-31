@@ -1,0 +1,11 @@
+/*fuente, tamaño, margen izquierdo y color de fondo para el body*/
+body {
+    font-family: 'Courier New', Courier, monospace, Sans, helvetica, arial, verdana ;
+    font-size: 15px;
+    margin-left: 400px;
+    background-color: #aea5a5;
+}
+/*Posición para la tabla dónde se muestran las imagenes*/
+.board { 
+    position: relative;
+}

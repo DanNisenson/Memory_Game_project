@@ -34,7 +34,7 @@ let numbers = [];
     // desordenamos array
     randon=numbers.sort(function(){return Math.random()-0.5});
 }
-//Load Board
+//Load Board ...
 function loadBoard(){
     loadNumbers();
     let boardElement = document.getElementById('board');

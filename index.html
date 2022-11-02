@@ -7,24 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory</title>
-    <script src="./script.js"></script>
-    <link rel="stylesheet"  href=".\styles.css">
+    <script defer src="./script.js"></script>  <!--//defer load the script when the page loads.-->
+    <link rel="stylesheet" href=".\styles.css">
 
 </head>
-
-<h1>Memory Game</h1>
-<h2>Player 1</h2>
-<input id='player1Counter' type="number" value="0">
-<h2>Player 2</h2>
-<input id='player2Counter' type="number" value="0">
-<div id="board">
+<body class="page">
+<div class="header">
+    <h1>Memory Game</h1>
 </div>
+<div class="sidebar">
+    <h2>Player 1</h2>
+    <input id='player1Counter' type="number" value="0">
+    <h2>Player 2</h2>
+    <input id='player2Counter' type="number" value="0">
+</div>
+<div id="board" class="container">
 
+</div>
 <br>
-<div  id:'new-game'>
-    New-Game
-    <input  type="button" onclick="location.reload()">
+<div id:"new-game" class="footer">
+    <input type="button" Value="New-Game" onclick="location.reload()">
 </div>
 </body>
 
-</html>
+</html

@@ -16,6 +16,13 @@ window.onload = function () {
 
 ///Definicion funciones
 
+ function reset(){
+    let refresh = document.getElementById('new-game');
+    refresh.addEventListener('click', _ => {
+            location.reload();
+})
+    loadBoard();
+ }
 
 // number pairs to be inserted in <input> elements
 
@@ -36,7 +43,7 @@ function loadBoard(){
     for (let i = 0; i <= (rows*columns-1); i++) {
         if (i%rows ==0 || i==0) {
             var row = document.createElement('div');
-            row.class='"card"';
+            row.className="card";
             num++
             row.id = `row${num}`;
             boardElement.appendChild(row);
@@ -46,7 +53,5 @@ function loadBoard(){
         card.id = `card${i}`;
         card.value=randon[i];
         row.appendChild(card);
-        }
     }
-
-
+}

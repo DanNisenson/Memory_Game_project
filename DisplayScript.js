@@ -2,12 +2,6 @@
 let rows = 5;
 let columns = 4;
 
-// Math.floor( Math.random() * (rows * columns / 2) )
-// Math.random -> check if it's included in numbers && not repeated more than once
-
-
-// Math.floor( Math.random() * (rows * columns / 2) )
-// Math.random -> check if it's included in numbers && not repeated more than once
 // realizar al inicio
 //Evento que al cargarse la ventana carga las funciones cargarImagenes, empezarJuego y cargar el reloj
 window.onload = function () {

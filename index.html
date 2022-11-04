@@ -19,6 +19,10 @@
         <input id='player1Counter' type="number" value="0">
         <h2>Player 2</h2>
         <input id='player2Counter' type="number" value="0">
+        <h3>Player</h3>
+        <input id="playerTurn" type="number" value="1">
+        <h3>turn</h3>
+
     </div>
     <div id="board" class="container">
         
@@ -28,7 +32,8 @@
         <input type="button" Value="New-Game" onclick="location.reload()">
     </div>
 
-    <script src="./DisplayScript.js"></script>  <!--//defer load the script when the page loads.-->
+    <script src="./DisplayScript.js"></script>
+    <script src="./GameLogic.js"></script>
 </body>
 
 </html

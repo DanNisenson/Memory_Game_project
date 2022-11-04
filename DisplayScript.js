@@ -30,6 +30,10 @@ function loadNumbers() {
     return Math.random() - 0.5;
   });
 }
+
+// array containing all cards
+let cards = [];
+
 //Load Board
 function loadBoard() {
   loadNumbers();
@@ -47,7 +51,15 @@ function loadBoard() {
     let card = document.createElement("input");
     card.type = "button";
     card.id = `card${i}`;
+    card.onclick = cardSelect;
     card.value = random[i];
+    cards.push(card);
     row.appendChild(card);
   }
 }
+
+/* for (let x of cards) {
+  console.log('Hola')
+  x.onclick = cardSelect;
+  console.log(x);
+} */

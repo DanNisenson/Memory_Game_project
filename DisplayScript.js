@@ -57,9 +57,3 @@ function loadBoard() {
     row.appendChild(card);
   }
 }
-
-/* for (let x of cards) {
-  console.log('Hola')
-  x.onclick = cardSelect;
-  console.log(x);
-} */

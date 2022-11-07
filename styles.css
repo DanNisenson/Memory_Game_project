@@ -1,57 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+}
 .page {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-areas:
-    ". header header."
-    "sidebar content content ."
-    ". footer  footer.";
-    background-color: #ffffff;
-  }
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
 /*font, size, left margin and background color for the body*/
 body {
-    margin: 40px;
-    font-family: 'Courier New', Courier, monospace, Sans, helvetica, arial, verdana ;
-    background-color: #aea5a5;
-  }
+  font-family: "Amatic SC", Courier, monospace, helvetica, arial, verdana,
+    sans-serif;
+  background-color: #aea5a5;
+  width: 100vw;
+}
 
 .header {
-    grid-area: header;
-    text-align: center;
-  }
-  
-.sidebar {
-    grid-area: sidebar;
-    text-align: center;
-  }  
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter {
+  border: none;
+  text-align: center;
+  width: 2em;
+}
+
+.turn-counter {
+  text-align: center;
+}
+
+.turn-counter input {
+  display: block;
+  width: 100vw;
+}
 
 /*Position for the board where the images are displayed*/
-.container { 
-    width: 800px;
-    height: auto;
-    display: grid;
-    grid-gap: 10px;
-    background: #cad2d5;
-    grid-template-columns: repeat(columns, 1fr);
-    grid-template-rows: repeat(rows, 1fr);
-    padding: 15px;
-    margin: 10px;
-    align-items:center;
-    grid-area: content;
-  }
+.container {
+  background: #cad2d5;
+  padding: 15px;
+}
 
 .cards {
-    background-color: #b85050;
-    color: #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    padding: 15px;
-    border: 3px solid #00000033;
-    
-  }
-  
+  background-color: #b85050;
+  color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid #00000033;
+}
+
 .footer {
-  grid-area: footer;
   text-align: center;
   font-size: 30%;
 }

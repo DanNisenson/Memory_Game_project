@@ -1,6 +1,6 @@
 // grid size
-let rows = 5;
-let columns = 4;
+let rows = 6;
+let columns = 6;
 
 // Math.floor( Math.random() * (rows * columns / 2) )
 // Math.random -> check if it's included in numbers && not repeated more than once
@@ -43,15 +43,15 @@ function loadBoard(){
     for (let i = 0; i <= (rows*columns-1); i++) {
         if (i%rows ==0 || i==0) {
             var row = document.createElement('div');
-            row.className="card";
+            row.className="rows";
             num++
             row.id = `row${num}`;
             boardElement.appendChild(row);
         }
         let card = document.createElement('input');
-        card.type = 'button';
-        card.id = `card${i}`;
+        card.type = 'text';
+        card.className = `cards fase`;
         card.value=randon[i];
-        row.appendChild(card);
+        row.appendChild(card);        
     }
 }

@@ -48,6 +48,8 @@ const selectionCheck = () => {
         selectedCards,selectedCardsId = [];
          //ImgCard.src = './img/'+ImgCard.value+'.png'; //ocultar o dejar en blanco
     } else if (turn == 1) {
+        // re-enables selected card
+        selectedCards.map((each) => each.removeAttribute("disabled"));
         selectedCards = [];
         selectedCardsId = [];
         turn = 2;
@@ -55,6 +57,8 @@ const selectionCheck = () => {
         ImgCard1.src = './img/back.png'; 
         ImgCard2.src = './img/back.png'; 
     } else if (turn == 2) {
+        // re-enables selected card
+        selectedCards.map((each) => each.removeAttribute("disabled"));
         ImgCard1.src = './img/back.png'; 
         ImgCard2.src = './img/back.png'; 
         selectedCards = [];

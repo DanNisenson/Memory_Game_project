@@ -4,74 +4,55 @@
   margin: 0;
 }
 .page {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-}
-/*font, size, left margin and background color for the body*/
-body {
-  font-family: "Amatic SC", Courier, monospace, helvetica, arial, verdana,
-    sans-serif;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas:
+  ". header header."
+  "sidebar content content ."
+  ". footer  footer.";
+  margin: 40px;
+  font-family: 'Courier New', Courier, monospace, Sans, helvetica, arial, verdana ;
   background-color: #aea5a5;
-  width: 100vw;
 }
 
 .header {
-  display: block;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.game-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.players {
-  display: flex;
-  justify-content: space-around;
-}
-
-.score {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.counter {
-  border: none;
-  text-align: center;
-  width: 2em;
-}
-
-.turn-counter {
+  grid-area: header;
   text-align: center;
 }
 
-.turn-counter input {
-  display: block;
-  width: 100vw;
-}
+.sidebar {
+  grid-area: sidebar;
+  text-align: center;
+}  
 
+.footer {
+  grid-area: footer;
+  text-align: center;
+  font-size: 30%;
+  }
+
+
+  
 /*Position for the board where the images are displayed*/
-.container {
+.container { 
+  flex: 0 1 15%;;
+  grid-gap: 10px;
   background: #cad2d5;
-  padding: 15px;
+  grid-template-columns: repeat(columns, 1fr);
+  grid-template-rows: repeat(rows, 1fr);
+  padding: 5px;
+  margin: 5px;
+  align-items:center;
+  grid-area: content;
 }
 
 .cards {
+  flex: 1 1 auto;
   background-color: #b85050;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
-  padding: 15px;
-  border: 3px solid #00000033;
+  font-size: 30%;
 }
 
-.footer {
-  text-align: center;
-  padding: 5px;
-  border: 3px solid #00000033;
-  
-}

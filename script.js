@@ -48,10 +48,9 @@ function loadBoard(){
             row.id = `row${num}`;
             boardElement.appendChild(row);
         }
-        let card = document.createElement('input');
-        card.type = 'text';
-        card.className = `cards fase`;
-        card.value=randon[i];
-        row.appendChild(card);        
+        let card = document.createElement('img');
+        card.className = `card${i}`;
+        card.src='\img\+randon[i]+'.npg';
+        row.appendChild(card);     
     }
 }

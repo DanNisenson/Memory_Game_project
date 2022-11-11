@@ -23,7 +23,7 @@ const cardSelect = (e) => {
   // disables selected card
   e.target.setAttribute("disabled", "");
     //ponemos imagen y guardamos id para cambio imagen despues
-    const ImgCard=document.getElementById(evt.target.id);
+    const ImgCard=document.getElementById(e.target.id);
     ImgCard.src = './img/'+ImgCard.value+'.png';
     selectedCardsId = [ ...selectedCardsId,  ImgCard.id];
   // display value on screen

@@ -36,13 +36,13 @@ const cardSelect = (e) => {
 const selectionCheck = () => {
     const ImgCard1=document.getElementById(selectedCardsId[0]);
     const ImgCard2=document.getElementById(selectedCardsId[1]);
-    if (selectedCards[0] == selectedCards[1] && turn == 1 ) {
+    if (selectedCards[0].value == selectedCards[1].value && turn == 1 ) {
         players.player1++;
         player1Counter.value = players.player1;
         selectedCards = [];
         selectedCardsId = [];
         //ImgCard.src = './img/'+ImgCard.value+'.png'; //ocultar o dejar en blanco
-    } else if (selectedCards[0] == selectedCards[1] && turn == 2) {
+    } else if (selectedCards[0].value == selectedCards[1].value && turn == 2) {
         players.player2++;
         player2Counter.value = players.player2;
         selectedCards,selectedCardsId = [];
@@ -52,6 +52,7 @@ const selectionCheck = () => {
         selectedCards.map((each) => each.removeAttribute("disabled"));
         selectedCards = [];
         selectedCardsId = [];
+        //change turn
         turn = 2;
         playerTurn.value = turn;
         ImgCard1.src = './img/back.png'; 
@@ -63,6 +64,7 @@ const selectionCheck = () => {
         ImgCard2.src = './img/back.png'; 
         selectedCards = [];
         selectedCardsId = [];
+        //change turn
         turn = 1;
         playerTurn.value = turn;
     }

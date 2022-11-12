@@ -30,7 +30,7 @@ const setGridSize = () => {
   initContainer.appendChild(initQuestion);
   // Create rows number input
   let rowsTag = document.createElement("input");
-  rowsTag.setAttribute("input", "number");
+  rowsTag.setAttribute("type", "number");
   rowsTag.setAttribute("role", "spinbutton");
   rowsTag.setAttribute("value", "5");
   rowsTag.setAttribute("min", "2");
@@ -48,7 +48,7 @@ const setGridSize = () => {
   initContainer.appendChild(times);
   // Create columns number input
   let colsTag = document.createElement("input");
-  colsTag.setAttribute("input", "number");
+  colsTag.setAttribute("type", "number");
   colsTag.setAttribute("value", "4");
   colsTag.setAttribute("min", "2");
   colsTag.setAttribute("max", "10");

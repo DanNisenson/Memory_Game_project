@@ -26,20 +26,37 @@ button {
 }
 
 .header {
-  grid-area: header;
+  display: block;
   text-align: center;
+  padding: 20px 0;
 }
 
-.sidebar {
-  grid-area: sidebar;
-  text-align: center;
-}  
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-.footer {
-  grid-area: footer;
+.players {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter {
+  border: none;
   text-align: center;
-  font-size: 30%;
-  }
+  width: 2em;
+}
+
+.turn-counter {
+  text-align: center;
+}
 
 .turn-counter input {
   display: block;
@@ -73,16 +90,10 @@ button {
   justify-content: center;
   align-items: center;
   background: #cad2d5;
-  grid-template-columns: repeat(columns, 1fr);
-  grid-template-rows: repeat(rows, 1fr);
-  padding: 5px;
-  margin: 5px;
-  align-items:center;
-  grid-area: content;
+  padding: 15px;
 }
 
 .cards {
-  flex: 1 1 auto;
   background-color: #b85050;
   color: #ffffff;
   border-radius: 10px;

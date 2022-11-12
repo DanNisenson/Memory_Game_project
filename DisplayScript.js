@@ -1,6 +1,6 @@
 // grid size
-let rows = 5;
-let columns = 4;
+let rows = 4;
+let columns = 2; 
 // array to contain all cards
 let cards = [];
 // to store random ordered value for each card
@@ -32,7 +32,7 @@ const setGridSize = () => {
   let rowsTag = document.createElement("input");
   rowsTag.setAttribute("type", "number");
   rowsTag.setAttribute("role", "spinbutton");
-  rowsTag.setAttribute("value", "5");
+  rowsTag.setAttribute("value", "4");
   rowsTag.setAttribute("min", "2");
   rowsTag.setAttribute("max", "10");
   rowsTag.className = "counter grid-size";
@@ -49,7 +49,7 @@ const setGridSize = () => {
   // Create columns number input
   let colsTag = document.createElement("input");
   colsTag.setAttribute("type", "number");
-  colsTag.setAttribute("value", "4");
+  colsTag.setAttribute("value", "2");
   colsTag.setAttribute("min", "2");
   colsTag.setAttribute("max", "10");
   colsTag.setAttribute("max", "10");

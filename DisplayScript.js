@@ -81,9 +81,11 @@ function loadBoard() {
       boardElement.appendChild(row);
     }
     let card = document.createElement("input");
-    card.type = "button";
+    card.type = "image";
     card.id = `card${i}`;
-    card.onclick = cardSelect;
+    card.src=`./img/back.png`
+    card.width=60;
+    card.onclick = cardSelect;   // cambiar a card.src=`./img/${random[i]}.png`
     card.value = random[i];
     cards.push(card);
     row.appendChild(card);

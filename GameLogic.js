@@ -19,7 +19,7 @@ let selectedCardsId =[];
 
 // on card click -> push to selectedCards; display value on screen; if 2 cards selected -> checkSelection
 const cardSelect = (e) => {
-  selectedCards.push(e.target); // not sure how this evt attribute is working
+  selectedCards.push(e.target); 
   // disables selected card
   e.target.setAttribute("disabled", "");
     //ponemos imagen y guardamos id para cambio imagen despues
@@ -28,7 +28,7 @@ const cardSelect = (e) => {
     selectedCardsId = [ ...selectedCardsId,  ImgCard.id];
   // display value on screen
   if (selectedCards.length == 2) {
-    setTimeout(selectionCheck,1000);
+    setTimeout(selectionCheck,800);
   }
 };
 

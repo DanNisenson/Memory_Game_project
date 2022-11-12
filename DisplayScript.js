@@ -3,6 +3,8 @@ let rows = 5;
 let columns = 4;
 // array to contain all cards
 let cards = [];
+// to store random ordered value for each card
+let random;
 
 // Get HTML elements
 let boardElement = document.getElementById("board");
@@ -10,7 +12,7 @@ let initContainer = document.createElement("div");
 initContainer.className = "init-container";
 boardElement.appendChild(initContainer);
 let newGameBtn = document.getElementById("newGame");
-newGameBtn.classList.add("start-btn")
+newGameBtn.classList.add("start-btn");
 newGameBtn.value = "START!";
 
 // realizar al inicio
@@ -58,7 +60,7 @@ const setGridSize = () => {
     columns = parseInt(e.target.value);
   };
   initContainer.appendChild(colsTag);
-  // Set button to load board and change inner text 
+  // Set button to load board and change inner text
   newGameBtn.onclick = () => {
     loadBoard();
     newGameBtn.value = "New Game";
@@ -67,8 +69,11 @@ const setGridSize = () => {
 
 //Load Board
 function loadBoard() {
+  // remove grid size setting from display
   initContainer.style.display = "none";
+  // create values array for each card and randomize positions
   loadNumbers();
+  // aux variables
   let num = 0;
   let row;
   // make  board elements and input elements. Append them to HTML.
@@ -83,23 +88,21 @@ function loadBoard() {
     let card = document.createElement("input");
     card.type = "image";
     card.id = `card${i}`;
-    card.src=`./img/back.png`
-    card.width=60;
-    card.onclick = cardSelect;   // cambiar a card.src=`./img/${random[i]}.png`
+    card.src = `./img/back.png`;
+    card.width = 60;
+    card.onclick = cardSelect; // cambiar a card.src=`./img/${random[i]}.png`
     card.value = random[i];
     cards.push(card);
     row.appendChild(card);
     newGameBtn.onclick = () => reset();
   }
 
+  // new game button reloads page
   function reset() {
-    console.log("rat");
     location.reload();
-    //loadBoard();
   }
 
   // number pairs to be inserted in <input> elements
-
   function loadNumbers() {
     let numbers = [];
     for (let i = 1; i <= (rows * columns) / 2; i++) {

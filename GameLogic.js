@@ -37,20 +37,19 @@ const cardSelect = (e) => {
 const selectionCheck = () => {
     const ImgCard1=document.getElementById(selectedCardsId[0]);
     const ImgCard2=document.getElementById(selectedCardsId[1]);
-
-    if (selectedCards[0].value == selectedCards[1].value && turn === 1 ) {
+    if (selectedCards[0].value == selectedCards[1].value && turn == 1 ) {
         players.player1++;
         player1Counter.value = players.player1;
         selectedCards = [];
         selectedCardsId = [];
         //ImgCard.src = './img/'+ImgCard.value+'.png'; //ocultar o dejar en blanco
-    } else if (selectedCards[0].value === selectedCards[1].value && turn === 2) {
+    } else if (selectedCards[0].value == selectedCards[1].value && turn == 2) {
         players.player2++;
         player2Counter.value = players.player2;
         selectedCards =[];
         selectedCardsId = [];
          //ImgCard.src = './img/'+ImgCard.value+'.png'; //ocultar o dejar en blanco
-    } else if (turn === 1) {
+    } else if (turn == 1) {
         // re-enables selected card
         selectedCards.map((each) => each.removeAttribute("disabled"));
         selectedCards = [];
@@ -61,6 +60,9 @@ const selectionCheck = () => {
         ImgCard1.src = './img/back.png'; 
         ImgCard2.src = './img/back.png'; 
     } else if (turn === 2) {
+        // re-enables selected card
+        selectedCards.map((each) => each.removeAttribute("disabled"));
+    } else if (turn == 2) {
         // re-enables selected card
         selectedCards.map((each) => each.removeAttribute("disabled"));
         ImgCard1.src = './img/back.png'; 
